@@ -1,107 +1,84 @@
 ! =============================================================================
-! Title: ArabSeed and Related Sites Filter List
+! Title: ArabSeed and Related Sites Filter List for AdGuard Home
 ! =============================================================================
 ! Description:  
-!   This filter list is designed to improve browsing experience on ArabSeed-related
-!   sites by blocking ads and unwanted content. Compatible with AdGuard Home and AdBlock.
+!   This filter list is specifically designed for AdGuard Home DNS-level blocking
+!   to block ArabSeed-related sites and their associated domains.
 !
-! Version:      2.0.0
+! Version:      2.1.0
 ! Last Updated: 2025-02-26
 ! License:      MIT License
 ! =============================================================================
 
-! =============================================================================
-! SECTION I: Domain Blocking
-! -----------------------------------------------------------------------------
-||m.gamehub.cam^$all
-||adding.quest^$all
-||zplay.gamezone.cam^$all
-||gamestation.cam^$all
-||gplay.gameplanet.cam^$all
-||tplay.techplanet.cam^$all
-||eplay2.gameplanet.cam^$all
-||plg7.reviewpalace.net^$all
-||tplay2.techplanet.cam^$all
-||migration.cam^$all
-||m.hegra.cam^$all
-||m.regenzi.site^$all
-||m.monafes.site^$all
-||m.reviewpalace.net^$all
-||m.techland.live^$all
-||forgee.xyz^$all
-||m.gameshop4u.com^$all
-||m.forgee.xyz^$all
-||kalosha.site^$all
-||reviewpalace.net^$all
-||jurbana.site^$all
-||gamevault.cam^$all
-||hawsa.site^$all
-||safary.site^$all
-||logenzi.site^$all
-||maftou7.site^$all
-||mar3a.site^$all
-||be7alat.site^$all
-||mastaba.site^$all
-||gamezone.cam^$all
-||robou3.site^$all
-||dl4all.online^$all
-||cheapou.site^$all
-||hegry.site^$all
-||playarena.cam^$all
-||moshakes.site^$all
-||joyarcade.cam^$all
-||gameflare.cam^$all
-||shallal.site^$all
-||marcmello.site^$all
-||mal3oub.site^$all
-||shabory.site^$all
-||marshoush.site^$all
-||ka3boly.site^$all
-||ofreok.online^$all
+! Main Domains
+||gamehub.cam^
+||adding.quest^
+||gamezone.cam^
+||gamestation.cam^
+||gameplanet.cam^
+||techplanet.cam^
+||reviewpalace.net^
+||migration.cam^
+||hegra.cam^
+||regenzi.site^
+||monafes.site^
+||techland.live^
+||forgee.xyz^
+||gameshop4u.com^
+||kalosha.site^
+||jurbana.site^
+||gamevault.cam^
+||hawsa.site^
+||safary.site^
+||logenzi.site^
+||maftou7.site^
+||mar3a.site^
+||be7alat.site^
+||mastaba.site^
+||robou3.site^
+||dl4all.online^
+||cheapou.site^
+||hegry.site^
+||playarena.cam^
+||moshakes.site^
+||joyarcade.cam^
+||gameflare.cam^
+||shallal.site^
+||marcmello.site^
+||mal3oub.site^
+||shabory.site^
+||marshoush.site^
+||ka3boly.site^
+||ofreok.online^
 
-! =============================================================================
-! SECTION II: Third-party Resource Blocking
-! -----------------------------------------------------------------------------
-||fulvideozrt.click^$third-party
-||cdn.jsdelivr.net/npm/sweetalert2@11.14.4/dist/sweetalert2.all.min.js$third-party
-||cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js$third-party
-||cimanow.online^$third-party
-||new.cimanow.online/judo.js^$script,third-party
-||egydead.space^$third-party
+! Resource Domains
+||fulvideozrt.click^
+||cimanow.online^
+||egydead.space^
 
-! =============================================================================
-! SECTION III: Image and Resource Blocking
-! -----------------------------------------------------------------------------
-||forgee.xyz/css/btn_close.gif$image
-||egydead.space/wp-content/uploads/2023/12/Download.png$image
-||i.ibb.co/dB9fgQQ/f2-1.gif$image
-||i.ibb.co/MMgpK0B/Phone.jpg$image
-||i.ibb.co/KF3P4Xv/f1-1.gif$image
+! Additional Domains
+||asd.show^
+||asd.rest^
+||asd.quest^
+||cimanow.cc^
+||faselhd.cafe^
+||faselhds.cafe^
+||faselhd.care^
+||faselhds.care^
+||arablionztv.com^
+||ak.sv^
 
-! =============================================================================
-! SECTION IV: Query Parameter Blocking
-! -----------------------------------------------------------------------------
-*$important,queryprune=r
-*$important,queryprune=t
-*$important,queryprune=gfs
-*$important,queryprune=tfs
-*$important,queryprune=mon
-*$important,queryprune=monz
-*$important,queryprune=gmz
-*$important,queryprune=etu
-*$important,queryprune=tuh
+! CDN and Image Hosting
+||i.ibb.co^
+||cdn.jsdelivr.net^$dnsrewrite=NXDOMAIN
+||cdnjs.cloudflare.com^$dnsrewrite=NXDOMAIN
 
-! =============================================================================
-! SECTION V: Additional Domain Blocking
-! -----------------------------------------------------------------------------
-||asd.show^$all
-||asd.rest^$all
-||asd.quest^$all
-||m15.asd.rest^$all
-||cimanow.cc^$all
-||web184.faselhd.cafe^$all
-||faselhds.cafe^$all
-||web184.faselhd.care^$all
-||faselhds.care^$all
-||arablionztv.com^$all
-||ak.sv^$all 
+! Wildcard Rules
+*.gamehub.cam^
+*.gameplanet.cam^
+*.techplanet.cam^
+*.reviewpalace.net^
+*.forgee.xyz^
+*.gameshop4u.com^
+*.faselhd.*^
+*.cimanow.*^ 
