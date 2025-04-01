@@ -1,0 +1,254 @@
+! =============================================================================
+! Title: Ezio Auditore Filter List (Adapted for AdGuard Home and AdBlock)
+! =============================================================================
+! Description:  
+!   This filter list is adapted from the original uBlock Origin version to block ads
+!   across the web using AdGuard Home (DNS-level) and AdBlock (browser-level).
+!   - Focuses on domain and URL pattern blocking.
+!   - Cosmetic filters are simplified for AdBlock compatibility where applicable.
+!   - Advanced uBlock Origin features (e.g., script injection) are omitted.
+!
+! Version:      1.2.5 (Adapted)
+! Last Updated: 2025-02-26 (Adapted 2025-04-01)
+! Author:       Ezio Auditore (adapted by Grok 3)
+! License:      MIT License
+! Homepage:     https://github.com/EzioTheGoat/EzioUserscripts/filters
+! =============================================================================
+
+! =============================================================================
+! SECTION I: Domain Blocking (ArabSeed and Related Sites)
+! ----------------------------------------------------------------------------- 
+! Note: These rules block entire domains or specific paths, suitable for AdGuard Home
+!       and AdBlock. Cosmetic filtering is not supported in AdGuard Home.
+||m.gamehub.cam^
+||adding.quest^
+||zplay.gamezone.cam^
+||gamestation.cam^
+||gplay.gameplanet.cam^
+||tplay.techplanet.cam^
+||eplay2.gameplanet.cam^
+||plg7.reviewpalace.net^
+||tplay2.techplanet.cam^
+||migration.cam^
+||m.hegra.cam^
+||m.regenzi.site^
+||m.monafes.site^
+||m.reviewpalace.net^
+||m.techland.live^
+||forgee.xyz^
+||m.gameshop4u.com^
+||m.forgee.xyz^
+||kalosha.site^
+||reviewpalace.net^
+||jurbana.site^
+||gamevault.cam^
+||hawsa.site^
+||safary.site^
+||logenzi.site^
+||maftou7.site^
+||mar3a.site^
+||be7alat.site^
+||mastaba.site^
+||gamezone.cam^
+||robou3.site^
+||dl4all.online^
+||cheapou.site^
+||hegry.site^
+||playarena.cam^
+||moshakes.site^
+||joyarcade.cam^
+||gameflare.cam^
+||shallal.site^
+||marcmello.site^
+||mal3oub.site^
+||shabory.site^
+||marshoush.site^
+||ka3boly.site^
+||ofreok.online^
+
+! CimaNow Domains
+||cimanow.cc^
+||vip.cimanowinc.com^
+||rs.cimanowinc.com^
+||bs.cimanow.cc^
+
+! =============================================================================
+! SECTION II: URL Pattern Blocking (Download Button URLs)
+! ----------------------------------------------------------------------------- 
+! Note: Blocks URLs with "?r=" or "?pst=" patterns lacking normalization parameters.
+!       AdGuard Home can handle basic path/query blocking; AdBlock supports this too.
+||m.gamehub.cam/*?r=*$domain=m.gamehub.cam
+||adding.quest/*?r=*$domain=adding.quest
+||zplay.gamezone.cam/*?r=*$domain=zplay.gamezone.cam
+||gamestation.cam/*?r=*$domain=gamestation.cam
+||gplay.gameplanet.cam/*?r=*$domain=gplay.gameplanet.cam
+||tplay.techplanet.cam/*?r=*$domain=tplay.techplanet.cam
+||eplay2.gameplanet.cam/*?r=*$domain=eplay2.gameplanet.cam
+||plg7.reviewpalace.net/*?r=*$domain=plg7.reviewpalace.net
+||tplay2.techplanet.cam/*?r=*$domain=tplay2.techplanet.cam
+||migration.cam/*?r=*$domain=migration.cam
+||m.hegra.cam/*?r=*$domain=m.hegra.cam
+||m.regenzi.site/*?r=*$domain=m.regenzi.site
+||m.monafes.site/*?r=*$domain=m.monafes.site
+||m.reviewpalace.net/*?r=*$domain=m.reviewpalace.net
+||m.techland.live/*?r=*$domain=m.techland.live
+||forgee.xyz/*?r=*$domain=forgee.xyz
+||m.gameshop4u.com/*?r=*$domain=m.gameshop4u.com
+||m.forgee.xyz/*?r=*$domain=m.forgee.xyz
+||kalosha.site/*?r=*$domain=kalosha.site
+||reviewpalace.net/*?pst=*$domain=reviewpalace.net
+||jurbana.site/*?r=*$domain=jurbana.site
+||gamevault.cam/*?r=*$domain=gamevault.cam
+||hawsa.site/*?r=*$domain=hawsa.site
+||safary.site/*?r=*$domain=safary.site
+||logenzi.site/*?r=*$domain=logenzi.site
+||maftou7.site/*?r=*$domain=maftou7.site
+||mar3a.site/*?r=*$domain=mar3a.site
+||be7alat.site/*?r=*$domain=be7alat.site
+||mastaba.site/*?r=*$domain=mastaba.site
+||gamezone.cam/*?r=*$domain=gamezone.cam
+||robou3.site/*?r=*$domain=robou3.site
+||dl4all.online/*?r=*$domain=dl4all.online
+||cheapou.site/*?r=*$domain=cheapou.site
+||playarena.cam/*?r=*$domain=playarena.cam
+||moshakes.site/*?r=*$domain=moshakes.site
+||gameflare.cam/*?r=*$domain=gameflare.cam
+||joyarcade.cam/*?r=*$domain=joyarcade.cam
+||hegry.site/*?r=*$domain=hegry.site
+||shallal.site/*?r=*$domain=shallal.site
+||marcmello.site/*?r=*$domain=marcmello.site
+||mal3oub.site/*?r=*$domain=mal3oub.site
+||shabory.site/*?r=*$domain=shabory.site
+||marshoush.site/*?r=*$domain=marshoush.site
+||ka3boly.site/*?r=*$domain=ka3boly.site
+||muhager.site/*?r=*$domain=muhager.site
+||ofreok.online/*?r=*$domain=ofreok.online
+
+! Block specific ad-related URLs
+||fulvideozrt.click^
+
+! =============================================================================
+! SECTION III: Simplified Cosmetic Filters (AdBlock Only)
+! ----------------------------------------------------------------------------- 
+! Note: These are for AdBlock compatibility; AdGuard Home ignores them.
+m.gamehub.cam##.visible-block
+m.gamehub.cam##.desktop-button
+adding.quest##.visible-block
+adding.quest##.desktop-button
+zplay.gamezone.cam##.visible-block
+zplay.gamezone.cam##.desktop-button
+gamestation.cam##.visible-block
+gamestation.cam##.desktop-button
+gplay.gameplanet.cam##.visible-block
+gplay.gameplanet.cam##.desktop-button
+tplay.techplanet.cam##.visible-block
+tplay.techplanet.cam##.desktop-button
+eplay2.gameplanet.cam##.visible-block
+eplay2.gameplanet.cam##.desktop-button
+plg7.reviewpalace.net##.visible-block
+plg7.reviewpalace.net##.desktop-button
+tplay2.techplanet.cam##.visible-block
+tplay2.techplanet.cam##.desktop-button
+migration.cam##.visible-block
+migration.cam##.desktop-button
+m.hegra.cam##.visible-block
+m.hegra.cam##.desktop-button
+m.regenzi.site##.visible-block
+m.regenzi.site##.desktop-button
+m.monafes.site##.visible-block
+m.monafes.site##.desktop-button
+m.reviewpalace.net##.visible-block
+m.reviewpalace.net##.desktop-button
+m.techland.live##.visible-block
+m.techland.live##.desktop-button
+forgee.xyz##.visible-block
+forgee.xyz##.desktop-button
+m.gameshop4u.com##.visible-block
+m.gameshop4u.com##.desktop-button
+m.forgee.xyz##.visible-block
+m.forgee.xyz##.desktop-button
+kalosha.site##.visible-block
+kalosha.site##.desktop-button
+reviewpalace.net##.visible-block
+reviewpalace.net##.desktop-button
+jurbana.site##.visible-block
+jurbana.site##.desktop-button
+gamevault.cam##.visible-block
+gamevault.cam##.desktop-button
+hawsa.site##.visible-block
+hawsa.site##.desktop-button
+safary.site##.visible-block
+safary.site##.desktop-button
+logenzi.site##.visible-block
+logenzi.site##.desktop-button
+maftou7.site##.visible-block
+maftou7.site##.desktop-button
+mar3a.site##.visible-block
+mar3a.site##.desktop-button
+be7alat.site##.visible-block
+be7alat.site##.desktop-button
+mastaba.site##.visible-block
+mastaba.site##.desktop-button
+gamezone.cam##.visible-block
+gamezone.cam##.desktop-button
+robou3.site##.visible-block
+robou3.site##.desktop-button
+dl4all.online##.visible-block
+dl4all.online##.desktop-button
+cheapou.site##.visible-block
+cheapou.site##.desktop-button
+hegry.site##.visible-block
+hegry.site##.desktop-button
+playarena.cam##.visible-block
+playarena.cam##.desktop-button
+moshakes.site##.visible-block
+moshakes.site##.desktop-button
+joyarcade.cam##.visible-block
+joyarcade.cam##.desktop-button
+gameflare.cam##.visible-block
+gameflare.cam##.desktop-button
+shallal.site##.visible-block
+shallal.site##.desktop-button
+marcmello.site##.visible-block
+marcmello.site##.desktop-button
+mal3oub.site##.visible-block
+mal3oub.site##.desktop-button
+shabory.site##.visible-block
+shabory.site##.desktop-button
+marshoush.site##.visible-block
+marshoush.site##.desktop-button
+ka3boly.site##.visible-block
+ka3boly.site##.desktop-button
+ofreok.online##.visible-block
+ofreok.online##.desktop-button
+
+! =============================================================================
+! SECTION IV: Unrelated Sites (General Blocking)
+! ----------------------------------------------------------------------------- 
+||asd.show^
+||asd.rest^
+||asd.quest^
+||m15.asd.rest^
+||cimanow.online^
+||new.cimanow.online^
+||web184.faselhd.cafe^
+||www.faselhds.cafe^
+||web184.faselhd.care^
+||www.faselhds.care^
+||egydead.space^
+||arablionztv.com^
+||ak.sv^
+
+! Specific resource blocking
+||forgee.xyz/css/btn_close.gif^$image
+||egydead.space/wp-content/uploads/2023/12/Download.png^$image
+
+! Simplified cosmetic filters for AdBlock
+cimanow.cc##.premium
+cimanow.cc##button
+cimanow.cc##.social.tab
+web184.faselhd.cafe##.breakNews
+www.faselhds.cafe##.social-block
+web184.faselhd.care##.breakNews
+www.faselhds.care##.social-block
+arablionztv.com##.GotoTop
